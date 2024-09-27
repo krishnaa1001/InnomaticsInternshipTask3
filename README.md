@@ -22,4 +22,4 @@ To run this project locally, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/your-repository-name.git
+   git clone https://github.com/krishnaa1001/InnomaticsInternshipTask3
