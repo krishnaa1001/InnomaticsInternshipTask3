@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto auto;
+  padding: 20px;
+}
+
+.header,
+.content,
+.signup,
+.feature,
+.feature1,
+.feature2,
+.feature3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.header {
+  background-color: rgb(178, 214, 255);
+  padding: 20px;
+  height: 150px;
+}
+
+.content {
+  background-color: rgb(234, 237, 240);
+  padding: 20px;
+  height: 195px;
+}
+
+.signup {
+  background-color: rgb(214, 233, 254);
+  padding: 20px;
+  height: 155px;
+}
+
+.feature {
+  background-color: lightcoral;
+  padding: 20px;
+  height: 155px;
+}
+
+.feature1 {
+  background-color: rgb(245, 207, 142);
+}
+
+.feature2 {
+  background-color: rgb(200, 198, 250);
+}
+
+.feature3 {
+  background-color: rgb(240, 154, 157);
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+
+  .header {
+    height: 22vh;
+  }
+
+  .content {
+    height: 22vh;
+  }
+
+  .signup {
+    height: 22vh;
+  }
+
+  .feature1,
+  .feature2,
+  .feature3 {
+    height: 10vh;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      "header header"
+      "content content"
+      "signup feature1"
+      "feature2 feature3";
+  }
+
+  .header {
+    grid-area: header;
+    height: 25vh;
+  }
+
+  .content {
+    grid-area: content;
+    height: 25vh;
+  }
+
+  .signup {
+    grid-area: signup;
+    height: 20vh;
+  }
+
+  .feature1 {
+    grid-area: feature1;
+    height: 20vh;
+  }
+
+  .feature2 {
+    grid-area: feature2;
+    height: 20vh;
+  }
+
+  .feature3 {
+    grid-area: feature3;
+    height: 20vh;
+  }
+}
+
+@media (min-width: 901px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header header header"
+      "feature1 feature2 feature3"
+      "signup signup signup"
+      "content content content";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .feature1 {
+    grid-area: feature1;
+  }
+
+  .feature2 {
+    grid-area: feature2;
+  }
+
+  .feature3 {
+    grid-area: feature3;
+  }
+
+  .signup {
+    grid-area: signup;
+  }
+
+  .content {
+    grid-area: content;
+  }
+}
